@@ -17,7 +17,7 @@ tags {
   }
   }
 # define private subnet
-resourse "aws_subnet" "private-subnet" {
+resource "aws_subnet" "private-subnet" {
   vpc_id = "${aws_vpc.default.id}"
   cidr_block = "${var.private_subnet_cidr}"
   

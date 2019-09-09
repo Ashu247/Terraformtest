@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "Region for the VPC"
-  default = "ap-southeast-1"
+  default = "us-west-2"
 }
 
 variable "vpc_cidr" {
@@ -19,8 +19,8 @@ variable "private_subnet_cidr" {
 }
 
 variable "ami" {
-  description = "Amazon Linux AMI"
-  default = "ami-14c5486b"
+  description = "Ubuntu Server 16.04 LTS (HVM)"
+  default = "ami-04613ff1fdcd2eab1"
 }
 
 variable "key_path" {

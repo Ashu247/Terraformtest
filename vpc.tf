@@ -22,6 +22,6 @@ resourse "aws_subnet" "private-subnet" {
   cidr_block = "${var.private_subnet_cidr}"
   
   tags {
-    Name= "database-public subnet"
+    Name = "database-public subnet"
     }
   }

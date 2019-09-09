@@ -7,12 +7,21 @@ resource "aws_vpc" "default" {
     Name = "ashishoperation"
   }
 }
-# Define private subnet
+# Define public subnet
 resource "aws_subnet" "public-subnet" {
 vpc_id = "${aws_vpc.default.id}"
 cidr_block = "${var.public_subnet_cidr}"
   
 tags {
-  Name = "Webserver-public sunet"
+  Name = "Webserver-public subnet"
   }
+  }
+# define private subnet
+resourse "aws_subnet" "private-subnet" {
+  vpc_id = "${aws_vpc.default.id}"
+  cidr_block = "${var.private_subnet_cidr}"
+  
+  tags {
+    Name= "database-public subnet"
+    }
   }
